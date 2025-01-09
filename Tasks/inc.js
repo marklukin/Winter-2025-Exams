@@ -1,14 +1,14 @@
 // Refactor following solution
 // Increment all numbers in dictionary
 
-// Step 4: simplify if-statement, change let to const
+// Step 5: changed to more understandable name
 
 'use strict';
 
 const incNumbers = (dict) => {
-  for (const numbers of Object.keys(dict)) {
-    if (typeof dict[numbers] === 'number') {
-      dict[numbers]++;
+  for (const key of Object.keys(dict)) {
+    if (typeof dict[key] === 'number') {
+      dict[key]++;
     }
   }
   return dict;
