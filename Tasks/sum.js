@@ -1,21 +1,20 @@
 // Refactor following solution
 // Sum all numbers from an array
 
-//Step 2: remove senseless lines
+//Step 3: add const to for..of loop, 
+// instead of new_Sum, create container result
 
 'use strict';
 
 const sum = (arr) => {
-  for (i of arr) {
-    let t = typeof i;
+  let result = 0;
+  for (const key of arr) {
+    let t = typeof key;
     if (t === 'number') {
-      if (sum.length > 0) {
-        const new_Sum = sum[sum.length - 1] + i;
-        sum.push(new_Sum);
-      }
+      result += key;
     }
   }
-  return sum[sum.length - 1];
+  return result;
 };
 
 module.exports = sum;
