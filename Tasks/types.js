@@ -1,8 +1,7 @@
 // Refactor following solution
 // Count types in an array
 
-//Step 3: add const to result,
-// remove senseless lines
+//Step 4: optimise for..of loop
 
 const types = (arr) => {
   const result = {
@@ -10,9 +9,8 @@ const types = (arr) => {
     string: 0,
     boolean: 0,
   };
-  for (i of arr) {
-    const t = typeof i;
-    result[t]++;
+  for (const name of arr) {
+    result[typeof name]++;
   }
   return result;
 };
