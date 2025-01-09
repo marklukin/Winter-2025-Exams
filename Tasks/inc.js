@@ -1,12 +1,12 @@
 // Refactor following solution
 // Increment all numbers in dictionary
 
-// Step 2: delete useless parameter, add const to the loop and rename identifiers
+// Step 3: convert for..in to for..of
 
 'use strict';
 
 let incNumbers = (dict) => {
-  for (const numbers in dict) {
+  for (const numbers of Object.keys(dict)) {
     if ((typeof dict[numbers]).charAt(0).toUpperCase() === 'N') {
       dict[numbers] = dict[numbers] + 1;
     }
