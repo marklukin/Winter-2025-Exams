@@ -1,21 +1,20 @@
 // Refactor following solution
 // Count types in an array
 
-//Step 2: change to arrow function
+//Step 3: add const to result,
+// remove senseless lines
 
 const types = (arr) => {
-  types_ = {
+  const result = {
     number: 0,
     string: 0,
     boolean: 0,
   };
   for (i of arr) {
     const t = typeof i;
-    types_[t]++;
+    result[t]++;
   }
-  arr.push('string');
-  return types_;
-  arr.length;
+  return result;
 };
 
 module.exports = types;
