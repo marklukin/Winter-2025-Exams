@@ -1,9 +1,9 @@
 // Refactor following solution
 // Count types in an array
 
-//Step 1: add 'use strict', follow naming conventions
+//Step 2: change to arrow function
 
-const types = function (arr) {
+const types = (arr) => {
   types_ = {
     number: 0,
     string: 0,
