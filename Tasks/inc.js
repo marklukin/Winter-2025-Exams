@@ -1,14 +1,14 @@
 // Refactor following solution
 // Increment all numbers in dictionary
 
-// Step 3: convert for..in to for..of
+// Step 4: simplify if-statement, change let to const
 
 'use strict';
 
-let incNumbers = (dict) => {
+const incNumbers = (dict) => {
   for (const numbers of Object.keys(dict)) {
-    if ((typeof dict[numbers]).charAt(0).toUpperCase() === 'N') {
-      dict[numbers] = dict[numbers] + 1;
+    if (typeof dict[numbers] === 'number') {
+      dict[numbers]++;
     }
   }
   return dict;
