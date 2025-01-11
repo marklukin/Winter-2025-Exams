@@ -1,21 +1,17 @@
 // Refactor following solution
 // Sum all number values in dict
 
-// Step 1: add 'use strict', add const
+// Step 2: remove senseless blocks, add let to identifier
 
 'use strict';
 
 const count = (obj) => {
-  sum = 0;
-  {
-  }
+  let sum = 0;
   keys = Object.keys(obj);
   keys.forEach((key) => {
-    [];
     const value = obj[key];
     if (typeof value === 'number') sum += value;
   });
-  ({});
   return sum;
 };
 
