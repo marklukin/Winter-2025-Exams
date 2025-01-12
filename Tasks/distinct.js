@@ -1,21 +1,21 @@
 // Refactor following solution
 // Return an array without duplicates
 
-// Step 1: add 'use strict', follow naming and coding conventions
+// Step 2: use for..of instead of forEach
 
 'use strict';
 
 const distinct = (array) => {
   const A = new Set();
   let w = 0;
-  array.forEach((a) => {
-    if (A.has(a)) {
+  for (const element of array) {
+    if (A.has(element)) {
       delete array[w];
     } else {
-      A.add(a);
+      A.add(element);
     }
     w++;
-  });
+  }
   return array.filter
   (x => typeof x === 'number');
 };
