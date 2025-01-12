@@ -1,23 +1,17 @@
 // Refactor following solution
 // Return an array without duplicates
 
-// Step 2: use for..of instead of forEach
+// Step 3: instead of creating new Set, create container result and check of each element 
+// of array already exists in result
 
 'use strict';
 
 const distinct = (array) => {
-  const A = new Set();
-  let w = 0;
+  const result = [];
   for (const element of array) {
-    if (A.has(element)) {
-      delete array[w];
-    } else {
-      A.add(element);
-    }
-    w++;
+    if (!result.includes(element)) result.push(element);
   }
-  return array.filter
-  (x => typeof x === 'number');
+  return result;
 };
 
 module.exports = distinct;
